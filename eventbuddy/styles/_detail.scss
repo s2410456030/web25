@@ -1,0 +1,181 @@
+@use 'mixins' as *;
+
+.detail {
+  @include card;
+  padding: 2rem;
+  max-width: 700px;
+
+  @include mobile {
+    padding: 1.25rem;
+  }
+
+  &__back {
+    @include btn-reset;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--primary);
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__hero {
+    @include flex-between;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  &__icon {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  &__title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--fg);
+    margin: 0.5rem 0;
+    line-height: 1.2;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  &__section {
+    margin-bottom: 1.5rem;
+
+    &-title {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--fg-muted);
+      margin: 0 0 0.5rem;
+    }
+  }
+
+  &__info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--fg);
+  }
+
+  &__info-icon {
+    font-size: 1rem;
+    flex-shrink: 0;
+    margin-top: 0.05rem;
+  }
+
+  &__description {
+    font-size: 0.9rem;
+    color: var(--fg);
+    line-height: 1.6;
+    background: var(--bg);
+    padding: 0.75rem;
+    border-radius: 8px;
+  }
+
+  &__participants-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  &__participant-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 99px;
+    padding: 0.3rem 0.75rem 0.3rem 0.4rem;
+    font-size: 0.8rem;
+    color: var(--fg);
+  }
+
+  &__add-participant {
+    @include btn-reset;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: var(--primary-light);
+    color: var(--primary);
+    border-radius: 99px;
+    padding: 0.3rem 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px dashed var(--primary);
+
+    &:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+  }
+}
+
+.btn {
+  @include btn-reset;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 1.1rem;
+  border-radius: 10px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: background 0.15s, transform 0.1s;
+
+  &:active {
+    transform: scale(0.97);
+  }
+
+  &--primary {
+    background: var(--primary);
+    color: #fff;
+
+    &:hover {
+      background: var(--primary-hover);
+    }
+  }
+
+  &--outline {
+    background: transparent;
+    border: 1.5px solid var(--border);
+    color: var(--fg);
+
+    &:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+  }
+
+  &--danger {
+    background: transparent;
+    border: 1.5px solid var(--danger);
+    color: var(--danger);
+
+    &:hover {
+      background: var(--danger);
+      color: #fff;
+    }
+  }
+}
