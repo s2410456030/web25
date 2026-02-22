@@ -1,0 +1,66 @@
+{
+  "users": [
+    { "id": 1, "name": "Max Mustermann", "email": "max@mustermann.com", "avatar": "MM" },
+    { "id": 2, "name": "Anna Schmidt",   "email": "anna@schmidt.com", "avatar": "AS" },
+    { "id": 3, "name": "Lena Huber",     "email": "lena@huber.com", "avatar": "LH" },
+    { "id": 4, "name": "Tom Weber",      "email": "tom@weber.com",  "avatar": "TW" },
+    { "id": 5, "name": "Sara Bauer",     "email": "sara@bauer.com", "avatar": "SB" }
+  ],
+  "tags": [
+    { "id": 1, "name": "Party" },
+    { "id": 2, "name": "Workshop" },
+    { "id": 3, "name": "Konzert" },
+    { "id": 4, "name": "Sport" },
+    { "id": 5, "name": "Meeting" }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "title": "Sommerfest",
+      "date": "2026-07-15",
+      "time": "18:00",
+      "location": "Park",
+      "description": "Unser jährliches Sommerfest mit Grill und Musik.",
+      "status": "planned",
+      "icon": "🎉",
+      "tagIds": [1],
+      "participantIds": [1, 2, 3]
+    },
+    {
+      "id": 2,
+      "title": "Phyton Workshop",
+      "date": "2026-02-31",
+      "time": "09:00",
+      "location": "FH Hagenberg",
+      "description": "Phyton Basics Workshop",
+      "status": "planned",
+      "icon": "💻",
+      "tagIds": [2, 5],
+      "participantIds": [2, 4, 5]
+    },
+    {
+      "id": 3,
+      "title": "Konzert",
+      "date": "2026-02-10",
+      "time": "20:00",
+      "location": "Brucknerhaus Linz",
+      "description": "Klassikkonzert.",
+      "status": "completed",
+      "icon": "🎵",
+      "tagIds": [3],
+      "participantIds": [1, 5]
+    },
+    {
+      "id": 4,
+      "title": "Vereins-Meeting",
+      "date": "2026-02-01",
+      "time": "19:00",
+      "location": "Vereinslokal",
+      "description": "Quartalsmeeting",
+      "status": "completed",
+      "icon": "📋",
+      "tagIds": [5],
+      "participantIds": [1, 2, 3, 4, 5]
+    }
+  ]
+}
